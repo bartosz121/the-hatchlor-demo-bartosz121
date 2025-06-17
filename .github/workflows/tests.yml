@@ -38,7 +38,7 @@ jobs:
           hatch run lint
       - name: Typecheck
         run: |
-          hatch run typing
+          hatch run typecheck
       - name: Run Tests
         run: |
           hatch run cov
