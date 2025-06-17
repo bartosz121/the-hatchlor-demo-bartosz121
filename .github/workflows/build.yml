@@ -28,7 +28,7 @@ jobs:
           hatch run typecheck
       - name: Run Tests
         run: |
-          hatch run pytest
+          hatch run cov-cicd
       - uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

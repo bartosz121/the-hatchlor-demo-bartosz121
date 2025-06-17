@@ -218,6 +218,7 @@ dependencies = [
 
 [tool.hatch.envs.default.scripts]
 cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/hatchlor_demo --cov=tests {args}"
+cov-cicd = "pytest --cov --cov-branch --cov-report=xml --cov-config=pyproject.toml --cov=src/hatchlor_demo --cov=tests {args}"
 no-cov = "cov --no-cov {args}"
 typecheck = [
     "echo \"VERSION: `pyright --version`\"",

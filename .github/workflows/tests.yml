@@ -41,4 +41,4 @@ jobs:
           hatch run typing
       - name: Run Tests
         run: |
-          hatch run pytest
+          hatch run cov
