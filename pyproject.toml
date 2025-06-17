@@ -50,10 +50,10 @@ source = "vcs"
 raw-options = { version_scheme = "no-guess-dev" }
 
 [tool.hatch.build.hooks.vcs]
-version-file = "hatchlor_demo/_version.py"
+version-file = "src/hatchlor_demo/_version.py"
 
 [tool.hatch.build]
-packages = ["hatchlor_demo"]
+packages = ["src/hatchlor_demo"]
 
 [tool.hatch.build.targets.sdist]
 exclude = [
@@ -66,7 +66,7 @@ exclude = [
 ##################
 
 [tool.pyright]
-include = ["hatchlor_demo", "tests"]
+include = ["src/hatchlor_demo", "tests"]
 exclude = ["**/__pycache__/**", ".hatch/venv/**"]
 typeCheckingMode = "strict"
 pythonVersion = "3.10"
@@ -83,7 +83,7 @@ testpaths = [
 
 [tool.coverage.run]
 branch = true
-source = ["hatchlor_demo"]
+source = ["src/hatchlor_demo"]
 omit = [
     "_version.py",  # automatically created by hatch-vcs, not in repo
 ]
@@ -217,7 +217,7 @@ dependencies = [
 ]
 
 [tool.hatch.envs.default.scripts]
-cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=hatchlor_demo --cov=tests {args}"
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/hatchlor_demo --cov=tests {args}"
 no-cov = "cov --no-cov {args}"
 typecheck = [
     "echo \"VERSION: `pyright --version`\"",

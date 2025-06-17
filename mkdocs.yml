@@ -8,7 +8,7 @@ copyright: 'Copyright &copy; Harro Hatchlor 2025-present'
 # Repository
 repo_name: hatchlor-demo
 repo_url: https://github.com/FlorianWilhelm/the-hatchlor-demo
-edit_uri: blob/master/docs
+edit_uri: blob/main/docs
 
 # Navigation
 nav:
@@ -57,7 +57,7 @@ theme:
     - navigation.instant
 
 watch:
-- hatchlor_demo
+- src/hatchlor_demo
 
 # Extensions
 plugins:
