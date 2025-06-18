@@ -275,6 +275,5 @@ build-check = [
     "validate",
 ]
 
-# Test matrix for various Python versions replacing the functionality of tox
-[[tool.hatch.envs.test.matrix]]
-python = ["310","311","312","313"]
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.10","3.11","3.12","3.13"]
