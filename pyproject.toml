@@ -27,8 +27,8 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
 ]
 
-dependencies = []
 dynamic = ["version"]
+dependencies = []
 
 [project.urls]
 # important URLs for this project
@@ -274,6 +274,9 @@ build-check = [
     "build",
     "validate",
 ]
+
+[tool.hatch.envs.hatch-test]
+template = 'default'
 
 [[tool.hatch.envs.hatch-test.matrix]]
 python = ["3.10","3.11","3.12","3.13"]
