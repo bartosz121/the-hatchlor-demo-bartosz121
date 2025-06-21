@@ -24,6 +24,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: Implementation :: CPython",
 ]
 
@@ -31,8 +32,6 @@ dynamic = ["version"]
 dependencies = []
 
 [project.urls]
-# important URLs for this project
-# ToDo: Modify according to your needs!
 Documentation = "https://github.com/FlorianWilhelm/the-hatchlor-demo"
 Source = "https://github.com/FlorianWilhelm/the-hatchlor-demo"
 Tracker = "https://github.com/FlorianWilhelm/the-hatchlor-demo/issues"
@@ -56,6 +55,9 @@ version-file = "src/hatchlor_demo/_version.py"
 packages = ["src/hatchlor_demo"]
 
 [tool.hatch.build.targets.sdist]
+include = [
+    "_version.py"
+]
 exclude = [
     "/.github",
     "/.hatch"
